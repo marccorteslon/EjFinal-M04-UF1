@@ -10,34 +10,69 @@
     <header>
         <h1>Página Personal</h1>
         <nav class="navbar">
-			<a href="index.html">Inicio</a>
-            <a href="cv.html">Currículum</a>
-            <a href="aficiones.html">Aficiones</a>
-            <a href="juego.html">Juego</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-    </header>
-
-    <main>
-        <section>
-            <h2>Inicio:</h2>
-            <p>Encuentra aquí más información sobre mí, como <strong>aficiones</strong>, mi <em>juego</em> y mi información de <strong><em>contacto</em></strong>.</p>
-			<!p><img src="videojuegos.jpg" /></p>
-		</section>
-
-        <section>
-            <h2>Páginas:</h2>
-            <ol>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="cv.html">Currículum</a></li>
                 <li><a href="aficiones.html">Aficiones</a></li>
                 <li><a href="juego.html">Juego</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-            </ol>
+            </ul>
+        </nav>
+        <!-- Botones para mostrar cuadro de texto, alineados a la derecha -->
+        <div class="nav-buttons">
+            <button id="btn1" class="nav-btn">Iniciar Sesión</button>
+            <button id="btn2" class="nav-btn">Registrarse</button>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Sobre Mí</h2>
+            <img src="videojuegos.jpg">
+            <p>Bienvenido a mi página personal. Aquí puedes encontrar información sobre mis aficiones, mi trabajo y formas de contactarme.<br></p>
+            <p>Soy un estudiante de programación y me gusta el desarrollo de videojuegos.</p>
+            <img src="programacion.jpg">
+        </section>
+
+        <section>
+            <h2>Galería</h2>
+            <img src="imagen1.jpg" alt="Imagen de muestra" class="gallery-img">
+            <img src="imagen2.jpg" alt="Otra imagen de muestra" class="gallery-img">
         </section>
     </main>
+
+    <!-- Cuadro de texto que aparecerá al hacer clic en los botones -->
+	<div id="popup" class="popup" style="display: none;">
+		<p>Hola! Este texto es un placeholder y no tiene funcionalidad!</p>
+		<!-- Botón para cerrar el cuadro de texto -->
+		<button id="close-btn" class="close-btn">Cerrar</button>
+	</div>
+
 
     <footer>
         <p>&copy; 2025 Mi Página Personal. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+		document.getElementById('btn1').addEventListener('click', function() {
+			document.getElementById('popup').style.display = 'flex'; // Mostrar el recuadro al hacer clic
+		});
+
+		document.getElementById('btn2').addEventListener('click', function() {
+			document.getElementById('popup').style.display = 'flex'; // Mostrar el recuadro al hacer clic
+		});
+
+		// Funcionalidad para cerrar el cuadro de texto
+		document.getElementById('close-btn').addEventListener('click', function() {
+			document.getElementById('popup').style.display = 'none'; // Ocultar el recuadro
+		});
+
+		// Cerrar el cuadro de texto cuando se hace clic fuera de él
+		window.addEventListener('click', function(event) {
+			if (event.target === document.getElementById('popup')) {
+				document.getElementById('popup').style.display = 'none'; // Ocultar el recuadro
+			}
+		});
+	</script>
 </body>
 </html>
