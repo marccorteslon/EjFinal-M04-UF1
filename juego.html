@@ -9,17 +9,17 @@
 <body>
     <header>
         <h1>Juego en JavaScript</h1>
-		<nav class="navbar">
-			<a href="index.html">Inicio</a>
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
             <a href="cv.html">Currículum</a>
             <a href="aficiones.html">Aficiones</a>
             <a href="juego.html">Juego</a>
             <a href="contacto.html">Contacto</a>
         </nav>
-		<div class="nav-buttons">
+        <nav class="nav-buttons" style="float: right;">
             <button id="btn1" class="nav-btn">Iniciar Sesión</button>
             <button id="btn2" class="nav-btn">Registrarse</button>
-        </div>
+        </nav>
     </header>
 
     <main>
@@ -28,36 +28,35 @@
         </section>
     </main>
 
-    <div id="popup" class="popup" style="display: none;">
-		<p>Hola! Este texto es un placeholder y no tiene funcionalidad!</p>
-		<!-- Botón para cerrar el cuadro de texto -->
-		<button id="close-btn" class="close-btn">Cerrar</button>
-	</div>
+    <section id="popup" class="popup" style="display: none;">
+        <p>Hola! Este texto es un placeholder y no tiene funcionalidad!</p>
+        <button id="close-btn" class="close-btn">Cerrar</button>
+    </section>
 
     <footer>
         <p>&copy; 2025 Marc Cortés Lon. Todos los derechos reservados.</p>
     </footer>
-	
-	<script>
-		document.getElementById('btn1').addEventListener('click', function() {
-			document.getElementById('popup').style.display = 'flex'; // Mostrar el recuadro al hacer clic
-		});
 
-		document.getElementById('btn2').addEventListener('click', function() {
-			document.getElementById('popup').style.display = 'flex'; // Mostrar el recuadro al hacer clic
-		});
+    <script>
+        document.getElementById('btn1').addEventListener('click', function() {
+            document.getElementById('popup').style.display = 'flex'; // Mostrar el recuadro al hacer clic
+        });
 
-		// Funcionalidad para cerrar el cuadro de texto
-		document.getElementById('close-btn').addEventListener('click', function() {
-			document.getElementById('popup').style.display = 'none'; // Ocultar el recuadro
-		});
+        document.getElementById('btn2').addEventListener('click', function() {
+            document.getElementById('popup').style.display = 'flex'; // Mostrar el recuadro al hacer clic
+        });
 
-		// Cerrar el cuadro de texto cuando se hace clic fuera de él
-		window.addEventListener('click', function(event) {
-			if (event.target === document.getElementById('popup')) {
-				document.getElementById('popup').style.display = 'none'; // Ocultar el recuadro
-			}
-		});
-	</script>
+        // Funcionalidad para cerrar el cuadro de texto
+        document.getElementById('close-btn').addEventListener('click', function() {
+            document.getElementById('popup').style.display = 'none'; // Ocultar el recuadro
+        });
+
+        // Cerrar el cuadro de texto cuando se hace clic fuera de él
+        window.addEventListener('click', function(event) {
+            if (event.target === document.getElementById('popup')) {
+                document.getElementById('popup').style.display = 'none'; // Ocultar el recuadro
+            }
+        });
+    </script>
 </body>
 </html>
