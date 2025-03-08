@@ -24,7 +24,9 @@
 
     <main>
         <section class="card">
-            <p>Aquí pondré mi juego de JavaScript cuando lo tenga.</p>
+            <p>¡¡¡Aquí está el juego de las hueveras hecho con JavaScript!!!.</p>
+			<button id="btn-juego" class="nav-btn">Ir al juego</button>
+			<p><br></p>
         </section>
     </main>
 
@@ -36,8 +38,12 @@
     <footer>
         <p>&copy; 2025 Marc Cortés Lon. Todos los derechos reservados.</p>
     </footer>
-
-    <script>
+	
+	 <script>
+        document.getElementById('btn-juego').addEventListener('click', function() {
+            window.location.href = "juego/game.html";
+        });
+		
         document.getElementById('btn1').addEventListener('click', function() {
             document.getElementById('popup').style.display = 'flex'; // Mostrar el recuadro al hacer clic
         });
